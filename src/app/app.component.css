@@ -1,0 +1,32 @@
+  .uberHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .searchbar {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  #menu {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-direction: row;
+    justify-content: space-between;  
+  }
+
+  .navButtons a:not(:first-child){
+    display: block;
+  }
+
+  .navButton {
+    width: 25%;
+  }
+
+  .icon, .navButtons a.icon {
+    display: none;
+  }
