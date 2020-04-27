@@ -1,32 +1,136 @@
-  .uberHeader {
+body {
+  font-family: Georgia;
+}
+
+
+.centerText {
+  text-align: center;
+}
+
+
+.content {
+  width: 80%;
+  margin-top: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.tradingCenter {
+  display: flex;
+  flex-direction: column;
+}
+
+.tradingCenter * {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.title {
+  text-align: center;
+  margin: auto;
+  font-size: 2em;
+  padding-bottom: 30px;
+}
+
+.sort {
+  text-align: center;
+  margin: auto;
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  margin-top: 2%;
+}
+
+.entryContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #DDDDDD;
+}
+
+.entryContainer * {
+  text-align: center;
+  margin: auto;
+}
+
+.descriptor {
+  width: 40%;
+}
+
+.details {
+  background-color: #AAAAAA;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+}
+
+.checkbox {
+  margin: auto;
+
+  margin-top: 5%;
+  height: 25px;
+  width: 25px;
+}
+
+.confirmation {
+  display: flex;
+  flex-direction: column;
+}
+
+.total, .price {
+  margin: auto;
+  display: inline;
+}
+
+/*Desktop View*/
+@media (min-width: 800px) {
+  
+  .heading {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    align-content: center;
+    width: 100%;
   }
-
-  .searchbar {
-    display: flex;
-    justify-content: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
-  #menu {
+  
+  .title {
     width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+  }
+
+  .dummy, .sort {
+    width: 20%;
+  }
+
+  .entry {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .entryContainer {
+    width: 65%;
+  }
+
+  .entryContainer * {
+    width: 33%;
+  }
+  
+  .entry {
     flex-direction: row;
-    justify-content: space-between;  
   }
 
-  .navButtons a:not(:first-child){
-    display: block;
+  .checkbox {
+    margin: auto;
+    margin-left: 10%;
   }
 
-  .navButton {
-    width: 25%;
+  .confirm {
+    margin: auto;
+    width: 10%;
   }
-
-  .icon, .navButtons a.icon {
-    display: none;
-  }
+}
