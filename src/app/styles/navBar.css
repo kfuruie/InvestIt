@@ -1,0 +1,98 @@
+/*Link style clear*/
+*{font-family: Georgia;}
+
+/*Search Bar*/
+.searchbar {
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+
+.navButtons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navButton {
+  text-align: center;
+  background-color: #E7E7E7;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navButton:hover {
+  background-color: #035EFC;
+  color: white;
+}
+
+.navButtons .icon {
+  display: none;
+}
+
+/*The hamburger button specific code*/
+.navButtons a:not(:first-child){
+  display: none;
+}
+
+.navButtons a.icon{
+  display: block;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+  
+.navButtons.burger a{
+  float: none;
+  display: block;
+  text-align: center;
+}
+
+
+/*Desktop View*/
+@media (min-width: 800px) {
+
+  .uberHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .searchbar {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  #menu {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-direction: row;
+    justify-content: space-between;  
+  }
+
+  .navButtons a:not(:first-child){
+    display: block;
+  }
+
+  .navButton {
+    width: 25%;
+  }
+
+  .icon, .navButtons a.icon {
+    display: none;
+  }
+}
