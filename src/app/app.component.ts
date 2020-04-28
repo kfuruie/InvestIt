@@ -13,6 +13,8 @@ export class AppComponent  {
     // {id: 2, name: "Upsorn Fund", price: 50, shares: 0}
   ];
 
+  constructor(private http: HttpClient) {   }
+
   total = 0;
 
   calculateTotal() {
@@ -28,13 +30,13 @@ export class AppComponent  {
     this.calculateTotal();
   }
 
-  // onSubmit(): void {
-  //   let params = JSON.stringify(this.investments);
-  //   this.http.post<>('http://localhost/CS4640/investform.php', params)
-  //   .subscribe(data => {
-  //     // this.postId = data.id;
-  // })
+  onSubmit(): void {
+      let params = JSON.stringify(this.investments);
+      this.http.post<any>('http://localhost/CS4640/investform.php', params)
+      .subscribe(data => {
+       // this.postId = data.id;
+    })
   
-  // }
+  }
 
 }
