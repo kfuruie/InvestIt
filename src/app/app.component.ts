@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ export class AppComponent  {
   investments = [
     {id: 0, name: "Fury Investments", price: 10, shares: 0},
     {id: 1, name: "Le Holdings", price: 20, shares: 0},
-    {id: 2, name: "Upsorn Fund", price: 50, shares: 0}
+    // {id: 2, name: "Upsorn Fund", price: 50, shares: 0}
   ];
 
   total = 0;
@@ -27,7 +28,13 @@ export class AppComponent  {
     this.calculateTotal();
   }
 
-  onSubmit(form: any): void {
-    console.log('You submitted value: ', form);
-  }
+  // onSubmit(): void {
+  //   let params = JSON.stringify(this.investments);
+  //   this.http.post<>('http://localhost/CS4640/investform.php', params)
+  //   .subscribe(data => {
+  //     // this.postId = data.id;
+  // })
+  
+  // }
+
 }
